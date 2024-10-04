@@ -5,7 +5,7 @@ import subprocess
 def main():
     if len(sys.argv) < 3:
         print("Please provide the repository path and commit message")
-        print("Use: push.py [REPO_PATH] [COMMIT_MSG]")
+        print("Use: push.py [REPO_PATH] '[COMMIT_MSG]'")
         sys.exit(1)
 
     repo_path = sys.argv[1]
