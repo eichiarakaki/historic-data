@@ -3,15 +3,12 @@ import sys
 import subprocess
 
 def main():
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
         print("Please provide the repository path and commit message")
-        print("Use: push.py [REPO_PATH] '[COMMIT_MSG]'")
+        print("Use: push.py '[COMMIT_MSG]'")
         sys.exit(1)
 
-    repo_path = sys.argv[1]
-    commit_msg = sys.argv[2]
-
-    os.chdir(repo_path)
+    commit_msg = sys.argv[1]
 
     try:
         subprocess.run(["git", "add", "."], check=True)
